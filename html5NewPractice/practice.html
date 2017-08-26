@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5新增元素的练习</title>
+</head>
+<body>
+<header>
+    <img src="image/1.jpg" width="600px" height="80px"/>
+</header>
+<!-- footer 要放在最后-->
+<footer>
+    <img src="image/2.jpg" width="600px" height="80px"/>
+</footer>
+     <form action="" method="get" >
+         <label for="label">输入内容:
+             <input type="text" id="label" autofocus autocomplete="on"/> <!-- 自动聚焦 -->
+         </label><br />
+         <label>email
+             <input type="email" />
+         </label><br />
+         <label> number
+             <input type="number"/>
+         </label><br />
+         <label>url
+         <input type="search" >
+         </label><br />
+         <label>
+             range <input type="range" required/> <!-- required 必填-->
+         </label><br />
+         <label>
+             date<input type="date"/>
+         </label><br />
+         <label >
+             time <input type="time" accesskey="s"/>
+         </label><br />
+         <label>
+             placeholder 占位符 <input type="text" value="请输入"/>
+
+              <input type="text" placeholder="请输入" />
+         </label>
+<br/>     <label>
+         datalist <input  type="text"  list="name" />
+          <datalist id="name">
+              <option>刘德华</option>
+              <option>刘若英</option>
+              <option>郭富城</option>
+              <option>郭敬明</option>
+          </datalist>
+</label>
+         <input type="submit" value="submit"/>
+     </form>
+
+</body>
+</html>
