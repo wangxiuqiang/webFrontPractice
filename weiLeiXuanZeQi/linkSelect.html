@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+       a {   /*使用link的时候当href中不是#的时候不能显示link的内容*/
+          color:red;
+       }
+
+        a:hover{/* 顺序不能乱 */
+            color:blue;
+        }
+        a:active{
+            color:orange;
+        }
+    </style>
+    <title>链接伪类选择器</title>
+</head>
+<body>
+<a href="https://www.baidu.com" > 秒杀</a>
+
+<a href="https://www.baidu.com" >百度</a>
+</body>
+</html>
