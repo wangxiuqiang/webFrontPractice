@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS复合选择器</title>
+    <style>
+        ul li ul { /*后代选择器*/
+            color:red;
+        }
+        .a1 > li {   /* 子元素选择器,只选择在父元素第一层的孩子 ,如果用ul ,不用class的话,会全选*/
+            color:blue;
+        }
+        a[title] {/*属性选择器,选择有特殊属性的标签*/
+            color:orange;
+        }
+
+        input[type=text] {   /*属性选择器,选择有特殊属性,并且有特殊值的标签*/
+            color: rgb(160, 75, 55);
+        }
+        div[class^=font] {
+            color: rgb(123, 34, 119);
+        }
+        div[class$=footer] {
+            color: aqua;
+        }
+        div[class*=tao] {
+            color: rgb(163, 142, 22);
+        }
+    </style>
+</head>
+<body>
+
+<ul class="a1">
+    <li>123
+        <ul>
+            <li>123</li>
+            <li>123</li>
+        </ul>
+    </li>
+    <li>12345</li>
+    <li>12345</li>
+    <li>12345</li>
+</ul>
+<hr />
+<a href="#" title="123">123</a>
+<a href="#" title="133">133</a>
+<a href="#" >153</a>
+<br />
+
+<input type="text" value="zhi">
+<input type="text" value="zhi">
+<input type="button" value="zhi">
+
+<hr />
+<div class="font12">23</div>
+<div class="font24">43</div>
+<div class="afooter">43</div>
+<div class="bfooter">343</div>
+<div class="ztaoa">343</div>
+<div class="taoaz">343</div>
+<div class="aztao">343</div>
+<div class="taotao">343</div>
+
+</body>
+</html>
