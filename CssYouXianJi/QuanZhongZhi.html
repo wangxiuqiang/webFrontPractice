@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>权重的要求</title>
+    <style>
+        div {
+            color:red;
+
+        }
+
+        .yanse{
+            color:blue;
+        }
+/*优先级按照四个字符串进行计算 , 标签选择器的是0,0,0,1  类选择器的是0,0,1,0
+   ID选择器的是0,1,0,0 行内选择器的是1,0,0,0  ,没一个字符串都是一个级别,执行级别高的,
+   前面的级别高,高一级别没办法被低的级别超越,没有仅为的说法, */
+        #id {
+            color:orange;
+        }
+    </style>
+</head>
+<body>
+    <div id="id" class="yanse"  style="color:pink" >
+        字体
+    </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Css优先级</title>
+    <style>
+        div {
+            color: blue;
+        }
+       p {     /* 继承的权重为0 , 有继承, 子类有自己的,那么它的继承来的权重为0*/
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <div >
+        <p >
+            字体
+        </p>
+    </div>
+</body>
+</html>
