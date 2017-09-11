@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浮动练习</title>
+
+    <style>
+        .father {
+            width:900px;
+            height: 200px;
+            background-color:rgba(190,20,220,0.5);
+        }
+        .son {
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            float: left;
+        }
+        .son2 {
+            background-color: purple;
+            width: 500px;
+            height: 100px;
+            float: left;
+        }
+
+
+        .son3 {
+            background-color: blue;
+            width: 500px;
+            height: 200px;
+            float: left;
+        }
+        .son4 {
+            background-color: yellow;
+            width: 500px;
+            height: 200px;
+            float: left;
+        }
+        .son5 {
+            background-color: orange;
+            width: 500px;
+            height: 100px;
+
+        }
+        .son6 {
+            background-color: pink;
+            width: 500px;
+            height: 100px;
+
+        }
+    /*多行盒子在多个标准流的父元素中才不会被别的压住,不然,浮动元素都在第一行,不浮动的会被压住*/
+    </style>
+</head>
+<body>
+
+    <div class="father">
+        <div class="son">
+
+        </div>
+        <div class="son2">
+
+        </div>
+    </div>
+    <div class="son3">
+
+    </div>
+    <div class="son4">
+
+    </div>
+    <!--下面的两个不浮动的被上面的挡住-->
+    <div class="son5">
+
+    </div>
+    <div class="son6">
+
+    </div>
+</body>
+</html>
