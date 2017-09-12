@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>请登录</title>
+    <style>
+        div:first-child {
+            background: url(images/1.jpg) ;
+            width:800px;
+            height: 900px;
+            float: left;
+            z-index: 1;
+        }
+        div:last-child {
+            z-index: 2;
+            border-style: solid;
+
+        }
+        input {
+            border-style:none;
+            width: 210px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+      <div>
+           123
+      </div>
+      <div style="position: absolute; left:50%; top: 50%;">
+          <form>
+              <table>
+                  <tr>
+                      <td>
+                          <input type="text" placeholder="请输入学号" autocomplete />
+                      <br />
+                      </td>
+                  </tr>
+             <tr>
+                 <td>
+                     <br />
+                     <input type="password" placeholder="请输入密码" />
+                 </td>
+             </tr>
+
+              </table>
+          </form>
+      </div>
+</body>
+</html>
