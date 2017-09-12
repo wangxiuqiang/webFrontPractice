@@ -18,10 +18,14 @@
       <file leaf-file-name="joinIn.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/joinIn.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="52">
-              <caret line="20" column="22" lean-forward="false" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+            <state relative-caret-position="182">
+              <caret line="34" column="35" lean-forward="false" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#1005#1011#0" expanded="true" />
+                <element signature="e#1011#1017#0" expanded="true" />
+                <element signature="e#1017#1023#0" expanded="true" />
+                <element signature="e#1023#1029#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -196,12 +200,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1505213315428</updated>
-      <workItem from="1505213316871" duration="3579000" />
+      <workItem from="1505213316871" duration="4642000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3579000" />
+    <option name="totallyTimeSpent" value="4642000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="62" y="-11" width="1305" height="780" extended-state="6" />
@@ -238,10 +242,14 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/joinIn.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="20" column="22" lean-forward="false" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+        <state relative-caret-position="182">
+          <caret line="34" column="35" lean-forward="false" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
           <folding>
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#1005#1011#0" expanded="true" />
+            <element signature="e#1011#1017#0" expanded="true" />
+            <element signature="e#1017#1023#0" expanded="true" />
+            <element signature="e#1023#1029#0" expanded="true" />
           </folding>
         </state>
       </provider>
