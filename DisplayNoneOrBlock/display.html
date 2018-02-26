@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>显示与隐藏</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        .box {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            margin: 100px auto;
+            line-height: 100px;
+            text-align: center;
+        }
+        div img {
+            display: none;
+            position: absolute;
+            left: 120px;
+            top: 0;
+        }
+        div:hover img {   /*鼠标经过div的时候，就会出现这个图片*/
+            display: block;
+
+        }
+
+        .item {
+            position: relative;
+            left: 500px;
+            top: 200px;
+            background-color: orangered;
+            width: 90px;
+            height: 20px;
+        }
+
+        .item ul {
+            display: none;
+            top: 13px;
+            left: 0;
+            background-color: aqua;
+            list-style: none;
+        }
+
+        .item:hover ul {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+      <div class="box">
+          扫二维码
+          <img src="images/erweima.png" alt="">
+      </div>
+
+
+      <div class="item">
+          下面有啥
+          <ul>
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+              <li>4</li>
+              <li>5</li>
+          </ul>
+      </div>
+</body>
+</html>
