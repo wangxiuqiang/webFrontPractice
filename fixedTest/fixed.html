@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>固定定位 </title>
+    <style>
+        * {
+           margin: 0;
+            padding: 0;
+        }
+        .top {
+            position: fixed;
+            width: 1348px;
+            /*固定定位必须要写宽和高，除非有内容把盒子撑开*/
+            background: url(images/top.png) no-repeat top center;
+            height: 47px;
+            top:0 ;
+        }
+         .box {
+             width: 900px;
+             margin: 50px auto;
+         }
+        .ad-l,
+        .ad-r {
+            top: 200px;
+            position: fixed;
+            width: 135px;
+            height: 177px;
+        }
+        .ad-l {
+            left: 0px;
+        }
+        .ad-r {
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+   <div class="top">
+
+   </div>
+   <div class="ad-l">
+       <img src="images/left.png" alt="">
+   </div>
+   <div class="ad-r">
+       <img src="images/right.png" alt="">
+   </div>
+    <div class="box">
+        <img src="images/box.png" width="900px" height="900px"  alt="">
+    </div>
+</body>
+</html>
