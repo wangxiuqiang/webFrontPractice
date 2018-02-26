@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .slider {
+            width: 520px;
+            height: 325px;
+            margin: 50px auto;
+            position: relative;
+        }
+        .arrow-l,
+        .arrow-r {
+            position: absolute;
+            width: 37px;
+            height: 60px;
+            display: block;
+            top: 50%;
+        }
+        .arrow-l {
+            left: 0;
+            margin-top: -30px;
+        }
+        .arrow-r {
+            right: 0;
+            margin-top: -30px;
+        }
+        .circle {
+            width: 65px;
+            height: 13px;
+            background-color:rgba(255,255,255,0.3);
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            margin-left: -32px;
+            border-radius: 6px;
+            list-style: none;
+        }
+        .circle li {
+            width: 9px;
+            height: 9px;
+            float: left;
+            margin:2px;
+            /*color:rgba(255,255,255,0);*/
+        /*<!-- li的颜色和背景色是不在一个位置上的 -->*/
+        /*<!-- 背景色是一个位置，本身color是一个位置 -->*/
+        /*<!-- 这里把本体的原色变成透明，li浮动之后背景色就会放在ul的背景上 -->*/
+            background-color: #A6A4A4;
+            border-radius: 50%;
+
+        }
+        
+        .circle li a {
+            display: block;
+            width: 9px;
+            height: 9px;
+            border-radius: 6px;
+            float: left;
+            color: red;
+        }
+        .circle li a:hover {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+
+<div class="slider">
+
+    <img src="images/picture.jpg" alt="">
+    <a href="#" class="arrow-l"><img src="images/left.png" alt=""></a>
+    <a href="#" class="arrow-r"><img src="images/right.png" alt=""></a>
+    <ul class="circle">     <!--小圆点-->
+       <li>
+           <a href="#"></a>
+       </li>
+        <!--currtent  单词表示  当前-->
+
+        <li>
+            <a href="#"></a>
+        </li>
+
+        <li>
+            <a href="#"></a>
+        </li>
+        <li>
+            <a href="#"></a>
+        </li>
+        <li>
+            <a href="#"></a>
+        </li>
+    </ul>
+</div>
+</body>
+</html>
