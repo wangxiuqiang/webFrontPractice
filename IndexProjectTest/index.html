@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>主页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+        }
+        a {
+            color: #000;
+            text-decoration: none;
+        }
+        input {
+            border: none;
+            box-sizing: border-box;
+            /*css3盒子模型  border 和 padding 都包含到宽度里面去*/
+        }
+        header {
+            height: 100px;
+            /*background-color: orange;*/
+            overflow: hidden;    /*  防止内外margin合并*/
+        }
+        nav {
+            height: 42px;
+            width: 1366px;
+            /*background-color: aqua;*/
+            margin: 26px auto;
+        }
+        .logo {
+            color: red;
+            font-size: 40px;
+            font-weight: 800;
+            float: left;
+            margin-left: 50px;
+        }
+        .navbar {
+            float: left;
+            height: 42px;
+            line-height: 42px;
+            margin-left: 50px;
+        }
+        .navbar li {
+            float: left;
+        }
+        .navbar li a {
+            padding: 0 8px;
+            display: block;
+            height: 42px;
+
+        }
+        .navbar li a:hover {
+            border-bottom: 2px solid midnightblue;
+        }
+        
+        .search {
+            height: 38px;
+            width: 410px;
+            border: 2px solid blue;
+            float: left;
+        }
+
+        .search input[type=text] {
+            height: 38px;
+            width: 360px;
+            float: left;
+            /*padding 会充开盒子，使盒子变大，，一种方式是将width - padding
+            重新规定width
+            另一种方式   如上面input 中的 box-sizing: border-box;*/
+            padding-left: 20px ;
+        }
+        .search input[type=submit] {
+            height: 38px;
+            width: 50px;
+            float: left;
+            background: url(images/searchLogo.png) no-repeat;
+        }
+    </style>
+</head>
+<body>
+<!--结构 -->
+<!--页面头-->
+     <header>
+         <nav>
+             <div class="logo">
+                 LOGO
+             </div>
+             <div class="navbar">
+                 <ul>
+                     <li><a href="#">首页</a></li>
+                     <li><a href="#">课程</a></li>
+                     <li><a href="#">职业规划</a></li>
+                 </ul>
+             </div>
+             <!--搜索框-->
+             <div class="search">
+                 <form action="https://www.baidu.com">
+                     <input type="text" placeholder="请输入关键字" >
+                     <input type="submit" value="" />
+                 </form>
+             </div>
+         </nav>
+     </header>
+</body>
+</html>
