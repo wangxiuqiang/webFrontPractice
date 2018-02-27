@@ -61,7 +61,7 @@
             height: 38px;
             width: 410px;
             border: 2px solid blue;
-            float: left;
+            float: right;
         }
 
         .search input[type=text] {
@@ -78,6 +78,18 @@
             width: 50px;
             float: left;
             background: url(images/searchLogoBlue.png) no-repeat;
+        }
+        /*个人中心*/
+        .personal {
+            float: right;
+            margin: 0 20px 0 30px;
+            height: 42px;
+            line-height: 42px;
+        }
+
+        .personal img {
+            margin: 0 10px 0 20px;
+
         }
     </style>
 </head>
@@ -96,6 +108,17 @@
                      <li><a href="#">职业规划</a></li>
                  </ul>
              </div>
+
+             <!--个人中心部分 -->
+             <div class="personal">
+                 <a href="#">个人中心
+                     <img src="images/ling.png" alt="">
+                 </a>
+                 <a href="#">
+                     <img src="images/touxiang.png" alt="" />
+                     Pruett
+                 </a>
+             </div>
              <!--搜索框-->
              <div class="search">
                  <form action="https://www.baidu.com">
@@ -103,10 +126,7 @@
                      <input type="submit" value="" />
                  </form>
              </div>
-             <!--个人中心部分 -->
-             <div class="personal">
-
-             </div>
+             
          </nav>
      </header>
 </body>
