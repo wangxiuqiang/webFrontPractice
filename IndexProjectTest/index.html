@@ -20,6 +20,11 @@
             box-sizing: border-box;
             /*css3盒子模型  border 和 padding 都包含到宽度里面去*/
         }
+        .container {
+            width: 1000px;
+            margin: 0 auto;
+        }
+
         header {
             height: 100px;
             /*background-color: orange;*/
@@ -83,12 +88,97 @@
         .personal {
             float: right;
             margin: 0 20px 0 30px;
+            /*上  右  下  左*/
             height: 42px;
             line-height: 42px;
         }
 
         .personal img {
             margin: 0 10px 0 20px;
+        }
+
+        /*banner 开始 */
+        .banner {
+            height: 420px;
+            background-color: midnightblue;
+        }
+        .banner-in {
+            height: 420px;
+           background: url(images/bannerBeiJing.png);
+        }
+        .slidebar {
+            float: left;
+            height: 420px;
+            width: 180px;
+            background: rgba(0,0,0,0.4);
+        }
+        .slidebar li a {
+            color: white;
+            font-size: 14px;
+            display: block;
+            /*对于单行的字来说 ， 可以不用加行高，自动撑开 */
+            line-height: 45px;
+            padding:0 20px;
+        }
+        .slidebar a span {
+            float: right;
+            font-family: "Adobe Arabic";
+        }
+        .slidebar li a:hover {
+            color: midnightblue;
+        }
+        .timetable {
+            width: 200px;
+            float: right;
+            height: 300px;
+            margin-top: 50px;
+            margin-right: 30px;
+            background-color: white;
+        }
+        .timetable dt {
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            font-size: 20px;
+            color: white;
+            background-color: aqua;
+            font-weight: 700;
+            /*字之间的距离*/
+            letter-spacing: 2px;
+        }
+        .timetable dd{
+            height: 60px;
+            width: 150px;
+            margin: 0 auto;
+            border-bottom: 1px solid #cccccc;
+            box-sizing: border-box;
+            padding-top: 13px;
+        }
+        .timetable dd a {
+            display: block;
+
+        }
+        .timetable dd a h4 {
+            font-size: 16px;
+            color: #4e4e4e;
+            font-weight: normal;
+        }
+        .timetable dd a p {
+            font-size: 14px;
+            color: #a5a5a5;
+        }
+        .timetable dd:last-child {
+            border: none;
+        }
+        .timetable dd:last-child a {
+            border: 2px solid #00a4ff;
+            text-align: center;
+            margin: 0 auto;
+            display: block;
+            height: 32px;
+            font-size: 18px;
+            line-height: 32px;
+            color: #00a4ff;
 
         }
     </style>
@@ -112,10 +202,10 @@
              <!--个人中心部分 -->
              <div class="personal">
                  <a href="#">个人中心
-                     <img src="images/ling.png" alt="">
+                     <img src="images/ling.png" align="center" alt="">
                  </a>
                  <a href="#">
-                     <img src="images/touxiang.png" alt="" />
+                     <img src="images/touxiang.png" align="center" alt="" />
                      Pruett
                  </a>
              </div>
@@ -129,5 +219,32 @@
              
          </nav>
      </header>
+
+    <div class="banner">
+        <div class="banner-in container">
+            <div class="slidebar">
+                <ul>
+                    <li><a href="#">前端页面  <span> > </span></a></li>
+                    <li><a href="#">前端页面  <span> > </span></a></li>
+                    <li><a href="#">前端页面  <span> > </span></a></li>
+                    <li><a href="#">前端页面  <span> > </span></a></li>
+                    <li><a href="#">前端页面  <span> > </span></a></li>
+                    <li><a href="#">前端页面  <span> > </span></a></li>
+                    <li><a href="#">前端页面  <span> > </span></a></li>
+                    <li><a href="#">前端页面  <span> > </span></a></li>
+                    <li><a href="#">前端页面  <span> > </span></a></li>
+                </ul>
+            </div>
+            <div class="timetable">
+                <dl>
+                    <dt>我的课程表</dt>
+                    <dd><a href="#"><h4>继续学习 编程语言</h4> <p>正在学习-使用对象</p></a></dd>
+                    <dd><a href="#"><h4>继续学习 编程语言</h4> <p>正在学习-使用对象</p></a></dd>
+                    <dd><a href="#"><h4>继续学习 编程语言</h4> <p>正在学习-使用对象</p></a></dd>
+                    <dd><a href="#">全部课程</a></dd>
+                </dl>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
