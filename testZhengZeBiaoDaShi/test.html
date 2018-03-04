@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+只能匹配一部分,,下面有对比验证 <br>
+   <script>
+       var txt = "sdfsa546fsdfwe84640";
+       var patt1= /[0-9]+/;
+       arr = txt.match(patt1);
+//       这样只能匹配一部分的  再有下一部分就匹配不出来了
+
+       for(var i= 0;i < arr.length; i++ ){
+           document.write(arr[i]);
+           document.write("<br>");
+       }
+   </script>
+
+<br>
+   <!--<script>-->
+       <!--var str = "123abc";-->
+       <!--var sptt2 = /^[0-9]+abc$/;-->
+       <!--document.write(str.match(sptt2));-->
+       <!--//^ 表示为匹配字符串开始的位置,,如上面的如果开始是数字就匹配到,不是就输出null-->
+       <!--/**-->
+        <!--*     [0-9]+表示匹配多个数字, [0-9]  匹配单个数字  + 匹配一个或多个,必须是连在一起的-->
+        <!--*-->
+        <!--*     abc$ 匹配字母abc  并且要以abc结尾    $表示为匹配输入字符串的结束位置,就是匹配的字符串要用来结尾-->
+        <!--*/-->
+   <!--</script>-->
+   <!--<br>-->
+
+  {}  限定符表达式的使用
+<br>
+   <script>
+       var str3 = "Chapter 0  Chapter 10"
+       var patt3 = /Chapter [0-9]{0,1}/
+       document.write(str3.match(patt3));
+   </script>
+   <br>
+
+
+
+   通过patt4 和 patt5 只能匹配着一组,后面的就匹配不到了
+<br>
+
+   <script>
+       var str4 = "Chapter 0  Chapter 11 Chapter 1250"
+       var patt4 = /Chapter [1-9][0-9]*/
+       // 通过patt4 和 patt5 只能匹配着一组,后面的就匹配不到了
+       //这个匹配的是位数不限的  * 只匹配前面的0-9  , ,,1-9 不管,
+      // document.write(str4.match(patt4));
+       arr1 =str4.match(patt4)
+       for(var i= 0;i < arr1.length; i++ ){
+           document.write(arr1[i]);
+           document.write("<br>");
+       }
+   </script>
+
+   <br>
+   <script>
+       var str5 = " Chapter 01"
+       var patt5 = /Chapter [0-9]*/
+       document.write(str5.match(patt5));
+   </script>
+<br>
+   字边界的使用  非字边界
+<br>
+  <script>
+      var str6 = "Chapter 86";
+
+      var patt6 = /\bCha/;
+      var patt7 = /\Bapt/;
+//      var patt6 = /\BCha/;
+//      var patt6 = /\Bter/;
+      /*
+      * 字边界\b 匹配开头和结尾的   字符,,,
+      * \B  如果匹配单词的开头或结尾是匹配不到的,输出null
+       **/
+      document.write(str6.match(patt6));
+      document.write("<br>");
+      document.write(str6.match(patt7));
+  </script>
+
+<br>
+一行的开始和结束    定位符      ^ $ 结合使用,表示一行,检索标题 <br>
+通过在 *、+ 或 ? 限定符之后放置 ?，该表达式从"贪心"表达式转换为"非贪心"表达式或者最小匹配。
+<br>
+<script>
+    var str8 = "Chapter 86";
+    var patt8 = /^Cha.*? [1-9][0-9]?$/
+    document.write(str8.match(patt8));
+</script>
+<br>
+正则表达式后面的全局标记 g 指定将该表达式应用到输入字符串中能够查找到的尽可能多的匹配。
+
+表达式的结尾处的不区分大小写 i 标记指定不区分大小写。
+
+
+字边界元字符确保只检测整个单词  即前后都有  \b  就检测整个的单个 <br>
+正则表达式的第二部分是对以前捕获的子匹配项的引用，即，单词的第二个匹配项正好由括号表达式匹配。\1 指定第一个子匹配项
+就是说用第一个匹配出来的单词去找一样的单词  像下面的就是先找一个  然后空格,,找到第二个然后单词结束,会有逗号打印出来隔开
+<br>
+多行标记指定换行符的两边可能出现潜在的匹配。
+    <br>
+
+<script>
+
+    var str9 = "Is is the cost of of gasoline going up up";
+    var patt9 = /\b([a-z]+) \1\b/ig;
+    document.write(str9.match(patt9));
+
+</script>
+
+
+<br>
+<script>
+    var txt2 = "http://www.runoob.com:80:90/html/html-tutorial.html";
+    var patttxt2 = /(\w+):\/\/([^/:]+)(:[0-9]*)?([^#]*)/;
+    var arr3 = txt2.match(patttxt2);
+
+    for(var i = 0; i < arr3.length; i++){
+        document.write("<br>");
+        document.write(arr3[i]);
+    }
+</script>
+
+<br>
+预查不消耗字符，也就是说，在一个匹配发生后，在最后一次匹配之后立即开始下一次匹配的搜索，而不是从包含预查的字符之后开始。
+<br>
+var txt3 = "windows2000  windowsxp windowsnt" <br>
+var patttxt3 = /windows(?=xp|nt)/ <br>
+意思是如果匹配到了windows   不会跳过xp 再去检索后面的 而是从xp开始检索,, <br>
+<pre>
+    (?=pattern)
+?=  正向肯定预查   ，在任何匹配pattern的字符串开始处匹配查找字符串。  正向和反向的规则是一样的.....
+?!  正向否定预查   ，在任何不匹配pattern的字符串开始处匹配查找字符串。
+?<=   反向(look behind)肯定预查，与正向肯定预查类似，只是方向相反。
+    例如，"(?<=95|98|NT|2000)Windows"能匹配"2000Windows"中的"Windows"，
+    但不能匹配"3.1Windows"中的"Windows"。
+</pre>
+<pre>
+?<  !   (注意<  和  ! 之间没有空格  ,此处写空格是为了能显示在  浏览器中)
+    反向否定预查，与正向否定预查类似，只是方向相反。
+    例如"(?< !95|98|NT|2000)Windows"能匹配"3.1Windows"中的"Windows"，
+    但不能匹配"2000Windows"中的"Windows"。
+</pre>
+
+
+<script>
+    var txt3 = "windows2000  windowsxp windowsnt"
+    var patttxt3 = /windows(?=xp|nt)/
+    var arr4= txt3.match(patttxt3);
+    for(var i = 0; i < arr4.length; i++){
+        document.write("<br>");
+        document.write(arr4[i]);
+    }
+</script>
+
+
+<br>
+<script>
+    var txt4 = "012";
+    var patttxt4 = /012/;
+    document.write(txt4.match(patttxt4));
+</script>
+
+<br>
+
+<script>
+    var txt5 = "once this is a apple ";
+    var patttxt5 = /once.*/;
+    document.write(txt5.match(patttxt5));
+</script>
+</body>
+</html>
