@@ -31,7 +31,7 @@
         /**
           完美的居中写法
          */
-        div:last-child {
+        div:nth-child(3) {
             width: 60px;
             height: 60px;
             position: absolute;
@@ -50,6 +50,41 @@
             margin-right: -30px;
             */
         }
+        div:nth-child(4) {
+            position: absolute;
+            left: 500px;
+            width: 520px;
+            height: 325px;
+            overflow: hidden;
+
+        }
+        div:nth-child(4):hover img{
+            transform: scale(2);
+            /*如果只写一个参数，就是宽度和高度缩放一样的倍数
+            transform: scale(2);
+            */
+        }
+        /*加过渡，因为过渡在img上实现， 因为过渡是谁做过渡给谁加，所以加img上*/
+        div:nth-child(4)  img {
+            transition: all 0.6s;
+        }
+
+       .image img {
+           left: 300px;
+           top:700px;
+           position: absolute;
+            transform-origin: center center;
+           /*transform-origin: 10px 10px;*/  /*精确定位按哪旋转*/
+           /*transform-origin: left top;*/  /*左上角，两者位置可换*/
+            /*另外可以加border ，或者改为圆角等，按自己想要的效果进行简单设置*/
+            border: 5px pink;
+            border-radius: 50%;
+            margin: 200px;
+            transition: all 0.6s;
+        }
+      .image  img:hover {
+            transform: rotate(180deg);/*deg是单位，表示度数，必须写*/
+        }
 
     </style>
 </head>
@@ -58,5 +93,8 @@
 <div></div>
 
 <div></div>
+<div><img src="d1.jpg" alt=""></div>
+
+ <div class="image"><img src="d1.jpg" alt=""></div>
 </body>
 </html>
