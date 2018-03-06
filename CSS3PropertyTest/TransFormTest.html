@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TransForm</title>
+    <style>
+        div:first-child {  /*   静态移动， 一般不用， 因为position就可以解决*/
+            width: 200px;
+            height: 300px;
+            transform: translate(100px ,100px);
+            /*如果  translate里面是百分比，，则相对自己的width走多少百分数*/
+            /*x轴上移动*/
+            /*transform: translate(100px);*/
+            /*transform: translateX(100px);*/
+            /*y轴移动*/
+            /*transform: translate(0,100px);*/
+            /*transform: translateY(100px);*/
+            background-color: orange;
+        }
+        div:nth-child(2) {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            transition: all 0.6s;
+        }
+
+        div:nth-child(2):active {
+            transform: translate(200px,200px);
+        }
+
+        /**
+          完美的居中写法
+         */
+        div:last-child {
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            background-color: blue;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            /*不用计算盒子的一半，防止除不尽的情况*/
+            /*
+            另一种写法   相对父元素水平垂直居中
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            left: 50%;top: 50%;
+            margin-left: -30px;
+            margin-right: -30px;
+            */
+        }
+
+    </style>
+</head>
+<body>
+  <div></div>
+<div></div>
+
+<div></div>
+</body>
+</html>

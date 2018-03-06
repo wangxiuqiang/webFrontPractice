@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3</title>
+    <style>
+        /* 伪元素可以当做插入一个盒子使用，用处广 ，不占位置*/
+        div {
+            width: 520px;
+            height: 325px;
+            margin: 100px auto;
+            position: relative;
+        }
+       div:hover::before {  /* 鼠标经过之后插入一个伪元素 */
+            content: '';  /*不写content  伪元素不起作用*/
+            width: 100%;
+            height: 100%;
+            border: 10px solid orange;
+            display: block;  /* 伪元素是行内元素 */
+            position: absolute;
+            top: 0;
+           left: 0;
+           box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+   <div class="first">
+       <img src="d1.jpg" alt="">
+   </div>
+</body>
+</html>
