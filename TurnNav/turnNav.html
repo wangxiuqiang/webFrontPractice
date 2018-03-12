@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>无缝滚动</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+        }
+        nav {
+            margin: 200px auto;
+            width: 500px;
+            height: 62px;
+            border: 1px solid orange;
+            overflow: hidden;
+        }
+        nav li {
+            float: left;
+        }
+        nav ul {
+            width: 200%;
+            animation: moving 5s linear infinite;
+        }
+        @keyframes moving {
+            from {
+                transform: translateX(0);
+            }
+            to{
+                transform: translateX(-500px);
+            }
+        }
+
+
+        nav:hover ul {
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+<body>
+     <nav>
+         <ul>
+             <li><a href="http://www.baidu.com"><img src="images/3.jpg" alt=""></a></li>
+             <li><a href="http://www.csdn.net"><img src="images/d1.jpg" alt=""></a></li>
+             <li><a href="http://mail.163.com"><img src="images/d6.jpg" alt=""></a></li>
+             <li><a href="http://blog.csdn.net/Pruett/article/details/79524308"><img src="images/picture.jpg" alt=""></a></li>
+             <li><a href="http://www.w3school.com.cn/cssref/index.asp#animation"><img src="images/picture2.jpg" alt=""></a></li>
+             <li><a href="http://www.baidu.com"><img src="images/3.jpg" alt=""></a></li>
+             <li><a href="http://www.csdn.net"><img src="images/d1.jpg" alt=""></a></li>
+             <li><a href="http://mail.163.com"><img src="images/d6.jpg" alt=""></a></li>
+             <li><a href="http://blog.csdn.net/Pruett/article/details/7952430"><img src="images/picture.jpg" alt=""></a></li>
+             <li><a href="http://www.w3school.com.cn/cssref/index.asp#animation"><img src="images/picture2.jpg" alt=""></a></li>
+         </ul>
+     </nav>
+</body>
+</html>
